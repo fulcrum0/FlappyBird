@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Bird : MonoBehaviour
 {
@@ -6,11 +8,17 @@ public class Bird : MonoBehaviour
     Rigidbody2D rb;
 
     [Header("Settings")]
+    [SerializeField] Manager gameManager;
+    [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] float jumpForce;
+    int score;
+    public bool isAlive = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        isAlive = true;
+        Time.timeScale = 0;
     }
 
     void Update()
@@ -20,9 +28,33 @@ public class Bird : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) && isAlive)
         {
             rb.linearVelocity = Vector2.up * jumpForce;
+        }
+    }
+
+    void Die()
+    {
+        isAlive = false;
+        Time.timeScale = 0;
+        gameManager.playAgain.SetActive(true);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("GameOver"))
+        {
+            Die();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Point"))
+        {
+            score++;
+            scoreText.text = score.ToString();
         }
     }
 }

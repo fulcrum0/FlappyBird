@@ -9,10 +9,8 @@ public class Bird : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] Manager gameManager;
-    [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] float jumpForce;
-    int score;
-    public bool isAlive = false;
+    public bool isAlive;
 
     void Awake()
     {
@@ -53,8 +51,7 @@ public class Bird : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Point"))
         {
-            score++;
-            scoreText.text = score.ToString();
+            gameManager.UpdateScore();
         }
     }
 }

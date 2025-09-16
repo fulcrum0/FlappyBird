@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject startScreen;
     public GameObject playAgain;
+    int score;
 
 
     public void StartTheGame()
@@ -22,7 +23,14 @@ public class Manager : MonoBehaviour
 
     public void PlayAgain()
     {
+        startScreen.SetActive(true);
         playAgain.SetActive(false);
         SceneManager.LoadScene(0);
+    }
+
+    public void UpdateScore()
+    {
+        score++;
+        scoreText.text = score.ToString();
     }
 }

@@ -1040,7 +1040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1346084093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 422844745}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-        m_MethodName: StartTheGame
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 1924149560}
   m_Layer: 0
   m_Name: Bird
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1706,7 +1706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bird
   gameManager: {fileID: 422844745}
-  scoreText: {fileID: 1293177338}
   jumpForce: 10
   isAlive: 0
 --- !u!95 &1924149561

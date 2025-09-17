@@ -13,6 +13,6 @@ public class Pipes : MonoBehaviour
 
     void SlideToLeft()
     {
-        transform.position += Vector3.left * slideSpeed * Time.deltaTime;
+        transform.position += slideSpeed * Time.deltaTime * Vector3.left;
     }
 }

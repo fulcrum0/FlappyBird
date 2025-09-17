@@ -8,7 +8,7 @@ public class PipesSpawner : MonoBehaviour
     [SerializeField] GameObject pipes;
     [SerializeField] float maxY;
     [SerializeField] float minY;
-    float spawnInterval = 1.5f;
+    [SerializeField] float spawnInterval = 1.5f;
 
 
     void Start()
@@ -21,7 +21,7 @@ public class PipesSpawner : MonoBehaviour
         while (bird.isAlive)
         {
             float randomY = Random.Range(minY, maxY);
-            Vector3 spawnPoint = new Vector3(4.5f, randomY, 0f);
+            Vector3 spawnPoint = new(4.5f, randomY, 0f);
 
             GameObject newPipe = Instantiate(pipes, spawnPoint, Quaternion.identity);
 

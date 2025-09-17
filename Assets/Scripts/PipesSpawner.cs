@@ -10,7 +10,7 @@ public class PipesSpawner : MonoBehaviour
     [Header("Settings")]
     [SerializeField] float maxY;
     [SerializeField] float minY;
-    [SerializeField] float spawnInterval = 1.5f;
+    [SerializeField] float spawnInterval;
 
 
     void Start()

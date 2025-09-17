@@ -4,9 +4,9 @@ public class Bird : MonoBehaviour
 {
     [Header("References")]
     Rigidbody2D rb;
+    [SerializeField] Manager gameManager;
 
     [Header("Settings")]
-    [SerializeField] Manager gameManager;
     [SerializeField] float jumpForce;
     public bool isAlive;
 

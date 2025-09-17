@@ -4,11 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("References")]
     public Bird bird;
     public TextMeshProUGUI scoreText;
     public GameObject startScreen;
     public GameObject playAgain;
+    
+    [Header("Settings")]
     int score;
 
 

@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class PipesSpawner : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("References")]
     [SerializeField] Bird bird;
     [SerializeField] GameObject pipes;
+
+    [Header("Settings")]
     [SerializeField] float maxY;
     [SerializeField] float minY;
     [SerializeField] float spawnInterval = 1.5f;

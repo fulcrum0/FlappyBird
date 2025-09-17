@@ -8,8 +8,8 @@ public class Manager : MonoBehaviour
     public Bird bird;
     public TextMeshProUGUI scoreText;
     public GameObject startScreen;
-    public GameObject playAgain;
-    
+    public GameObject gameOver;
+
     [Header("Settings")]
     int score;
 
@@ -25,7 +25,7 @@ public class Manager : MonoBehaviour
     public void PlayAgain()
     {
         startScreen.SetActive(true);
-        playAgain.SetActive(false);
+        gameOver.SetActive(false);
         SceneManager.LoadScene(0);
     }
 

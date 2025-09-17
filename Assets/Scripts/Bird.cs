@@ -34,7 +34,7 @@ public class Bird : MonoBehaviour
     {
         isAlive = false;
         Time.timeScale = 0;
-        gameManager.playAgain.SetActive(true);
+        gameManager.gameOver.SetActive(true);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -52,4 +52,5 @@ public class Bird : MonoBehaviour
             gameManager.UpdateScore();
         }
     }
+
 }
